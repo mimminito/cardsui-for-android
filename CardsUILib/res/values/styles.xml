@@ -1,7 +1,5 @@
 <resources>
 
-    <style name="AppTheme" parent="android:Theme.Light" />
-
     <!--
           <style name="CardTitle">
         <item name="android:id">@android:id/title</item>
@@ -39,7 +37,7 @@
         <item name="android:textColor">@color/card_title_text</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
-    
+
     <style name="StackTitle" parent="@style/CardText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

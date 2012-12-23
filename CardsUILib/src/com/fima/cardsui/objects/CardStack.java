@@ -32,9 +32,11 @@ public class CardStack extends AbstractCard {
 	private StackAdapter mAdapter;
 	private int mPosition;
 	private Context mContext;
+	private CardStack mStack;
 
 	public CardStack() {
 		cards = new ArrayList<Card>();
+		mStack = this;
 	}
 
 	public ArrayList<Card> getCards() {
@@ -116,7 +118,15 @@ public class CardStack extends AbstractCard {
 
 							@Override
 							public void onDismiss(View view, Object token) {
+								Card c = (Card) token;
+								cards.remove(c);
+								
 
+								mAdapter.setItems(mStack, getPosition());
+
+								// refresh();
+								mAdapter.notifyDataSetChanged();
+								
 							}
 						}));
 

@@ -24,8 +24,9 @@ public abstract class Card extends AbstractCard {
 
 	}
 
-	public Card(String title) {
+	public Card(String title, String desc) {
 		this.title = title;
+		this.desc = desc;
 	}
 	
 	@Override
